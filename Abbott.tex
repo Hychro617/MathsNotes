@@ -1,0 +1,93 @@
+\documentclass[12pt,twoside]{article}
+\usepackage[left=1in, right=1in, top=1in, bottom=1in]{geometry} % General margins
+\usepackage{changepage} % Allows margin adjustments for specific sections
+\usepackage{amsmath, amsthm, amssymb }
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{xcolor} % For color definitions
+\usepackage[hidelinks]{hyperref}
+\usepackage[pagecolor=white]{pagecolor} % For page background color
+\usepackage[most]{tcolorbox}
+\usepackage{array}
+\usepackage{booktabs} % For better-looking table rules 
+\usepackage[table]{xcolor}
+\usepackage{adjustbox} % For resizing tables
+\usepackage{longtable}
+\usepackage[version=4]{mhchem}
+\usepackage{float}
+\renewcommand{\arraystretch}{1.5}
+\setlength{\tabcolsep}{10pt}
+\tcbuselibrary{listingsutf8}
+\definecolor{customgreen}{HTML}{2E6F40}
+\definecolor{lightergreen}{HTML}{9b9b9b}
+\definecolor{blue}{HTML}{125eaa}
+\definecolor{green}{HTML}{066d41}
+\definecolor{red}{HTML}{70000e}
+
+
+\numberwithin{equation}{section} % Number equations by section
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\newtheorem{definition}{Definition}[section] % Definitions numbered by section
+\newcommand{\reportauthor}{Zach Mollatt - Notes from Stephen Abbott's Understanding Analysis 2$^{\text{nd}}$ edition}
+\newcommand{\reporttitle}{Analysis}
+\tcbset{
+    colframe=customgreen, % Frame colour
+    colback=lightergreen, % Background colour
+    coltitle=black,       % Title text colour
+    coltext=black         % Body text colour
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{titlepage}
+
+\tableofcontents
+\newpage
+
+\begin{adjustwidth}{0in}{0in} 
+\section{The Real Numbers}
+\subsection{Irrationality}
+\textbf{The Proof for $\sqrt{2}$ being Irrational}\\
+First, using the defintion for a rational number, assume $\sqrt{2}$ can be expressed in the form $\frac{p}{q}$ 
+where p and q are integers.\\
+Squaring both sides we then get:
+\begin{equation}
+    \frac{p^2}{q^2} = 2
+    \label{eqn:1}
+\end{equation}
+Next, we will assume that $p$ and $q$ have no common factor as we could cancel it. As a result this implies 
+\begin{equation}
+   p^2 = 2q^2 
+   \label{eqn:2}
+\end{equation}
+From this we can deduce that $p^2$ is even due to the being divisible by two, meaning $p$ is also even. As a result
+we can represent $p = 2r$. 
+\begin{equation}
+    \therefore 2r^2 = p^2
+    \label{eqn:3}
+\end{equation}
+However, this implies $p$ and $q$ are both even. This is contradictory to our statement earlier assuming that they had no common factor.
+Hence equation \eqref{eqn:1} cannot hold and hence, the theorem of irrationality is proven.\\
+\textbf{Number Sets}
+\begin{itemize}
+    \item $\mathbb{N} = \{1, 2, 3, \ldots\}$ — Natural numbers\\
+    Natural Numbers can perform addition perfectly well.
+    \item $\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}$ — Integers\\
+    Extend to integers to have an additive identity (0) and subtraction.
+    \item $\mathbb{Q} = \left\{ \frac{p}{q} \mid p, q \in \mathbb{Z},\, q \neq 0 \right\}$ — Rational numbers\\
+    Multiplication and Division are now capable with this set.
+    \item $\mathbb{R}$ — Real Numbers
+    This accounts for any "gaps" on the number line where irrational components may be found.
+\end{itemize}
+$\mathbb{Q}$ defines a field (any set where,  addition and multiplication are well-defined operations
+that are commutative, associative, and obey the distributive property $a(b + c) = ab + ac$).
+
+
+\end{adjustwidth}  
+
+
+
+\end{document}
