@@ -25,9 +25,7 @@ Coming from a Chemical Engineering background, I’m strengthening my mathematic
 - **Numerical Methods**  
   Approximation, root-finding, numerical integration and differentiation.
 
-- **Optimization (Theory)**  
+- **Optimisation (Theory)**  
   Convex optimization, duality theory, KKT conditions.
 
-- **Topology (Introductory)**  
-  Basic concepts of open/closed sets, continuity, compactness.
 
